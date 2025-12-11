@@ -4,7 +4,10 @@ namespace FizzBuzz
     {
         public static List<string> Generate(int count)
         {
-            // TODO: Implement FizzBuzz logic using TDD
+            return new List<string>
+            {
+                "1"
+            };
             throw new NotImplementedException("Implement using TDD: Red → Green → Refactor");
         }
     }
