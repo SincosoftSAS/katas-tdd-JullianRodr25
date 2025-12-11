@@ -8,9 +8,11 @@ namespace FizzBuzz
 
             for (var i = 1; i <= count; i++)
             {
-                resultList.Add(i.ToString());
+                if (i == 3)
+                    resultList.Add("Fizz");
+                else
+                    resultList.Add(i.ToString());
             }
-
             return resultList;
         }
     }
