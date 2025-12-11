@@ -63,7 +63,7 @@ namespace FizzBuzz.Tests
         }
 
         [Fact]
-        public void Generate_WithFifteen_ReturnsListWithFizzBuzz()
+        public void Generate_WithFifteen_ReturnsListWithFizzBuzzPosition()
         {
             // Arrange & Act
             var result = FizzBuzzGenerator.Generate(15);
