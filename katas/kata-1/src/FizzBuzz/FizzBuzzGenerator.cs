@@ -8,7 +8,7 @@ namespace FizzBuzz
 
             for (var i = 1; i <= count; i++)
             {
-                if (i == 3)
+                if (i % 3 == 0)
                     resultList.Add("Fizz");
                 else if (i == 5)
                     resultList.Add("Buzz");
