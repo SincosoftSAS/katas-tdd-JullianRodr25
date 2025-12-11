@@ -34,6 +34,15 @@ namespace FizzBuzz.Tests
             result.Should().HaveCount(3);
             result[2].Should().Be("Fizz");
         }
+        
+        [Fact]
+        public void Generate_WithFive_ReturnsBuzzAtFifthPosition()
+        {
+            var result = FizzBuzzGenerator.Generate(5);
+
+            result.Should().HaveCount(5);
+            result[4].Should().Be("Buzz");
+        }
 
         [Fact]
         public void Generate_WithFifteen_ReturnsListWithFizzBuzz()
