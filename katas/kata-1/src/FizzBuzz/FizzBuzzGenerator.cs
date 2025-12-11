@@ -4,8 +4,14 @@ namespace FizzBuzz
     {
         public static List<string> Generate(int count)
         {
-            return ["1"];
-            throw new NotImplementedException("Implement using TDD: Red → Green → Refactor");
+            var result = new List<string>();
+
+            for (int i = 1; i <= count; i++)
+            {
+                result.Add(i.ToString());
+            }
+
+            return result;
         }
     }
 }
