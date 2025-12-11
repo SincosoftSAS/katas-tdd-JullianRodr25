@@ -10,7 +10,7 @@ namespace FizzBuzz
             {
                 if (i % 3 == 0)
                     resultList.Add("Fizz");
-                else if (i == 5)
+                else if (i % 5 == 0)
                     resultList.Add("Buzz");
                 else
                     resultList.Add(i.ToString());
