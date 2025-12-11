@@ -8,7 +8,9 @@ namespace FizzBuzz
 
             for (var i = 1; i <= count; i++)
             {
-                if (CheckDivisibilityByThree(i))
+                if (i % 15 == 0)
+                    resultList.Add("FizzBuzz");
+                else if (CheckDivisibilityByThree(i))
                     resultList.Add("Fizz");
                 else if (CheckDivisibilityByFive(i))
                     resultList.Add("Buzz");
