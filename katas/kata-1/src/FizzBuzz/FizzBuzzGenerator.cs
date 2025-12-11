@@ -4,14 +4,14 @@ namespace FizzBuzz
     {
         public static List<string> Generate(int count)
         {
-            var result = new List<string>();
+            var  resultList = new List<string>();
 
-            for (int i = 1; i <= count; i++)
+            for (var i = 1; i <= count; i++)
             {
-                result.Add(i.ToString());
+                resultList.Add(i.ToString());
             }
 
-            return result;
+            return resultList;
         }
     }
 }
