@@ -19,9 +19,11 @@ namespace Calculator
 
         public int Divide(int valor1, int valor2)
         {
-            if (valor2 == 0)   
+            if (CheckForZero(valor2))   
                 throw new ArgumentException("Cannot divide by zero.");
             return valor1 / valor2;
         }
+
+        private static bool CheckForZero(int valor2) => valor2 == 0;
     }
 }
