@@ -20,7 +20,7 @@ namespace Calculator.Tests
             // Assert
             result.Should().Be(8);
         }
-        
+
         [Fact]
         public void Subtract_TwoNumbers_ReturnsDifference()
         {
@@ -35,10 +35,18 @@ namespace Calculator.Tests
             result.Should().Be(6);
         }
 
-        // TODO: Implementa más tests usando TDD
-        // Suggestions:
-        // - Test multiply with positive numbers
-        // - Test divide with positive numbers  
-        // - Test edge cases (division by zero, negative numbers, etc.)
+        [Fact]
+        public void Multiply_TwoPositiveNumbers_ReturnsProduct()
+        {
+            // Arrange
+            int valor1 = 4;
+            int valor2 = 3;
+
+            // Act
+            int result = _calculator.Multiply(valor1, valor2);
+
+            // Assert
+            result.Should().Be(12);
+        }
     }
 }
