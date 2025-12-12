@@ -7,18 +7,16 @@ namespace Calculator.Tests
     {
         private readonly Calculator _calculator = new();
 
-        [Fact]
-        public void Add_TwoPositiveNumbers_ReturnsSum()
+        [Theory]
+        [InlineData(5, 3, 8)]
+        [InlineData(-3, -9, -12)]
+        public void Add_WithPositiveAndNegativeNumbers_ReturnsSum(int valor1,int valor2, int valorEsperado)
         {
-            // Arrange
-            int valor1 = 5;
-            int valor2 = 3;
-
             // Act
             int result = _calculator.Add(valor1, valor2);
 
             // Assert
-            result.Should().Be(8);
+            result.Should().Be(valorEsperado);
         }
 
         [Fact]
@@ -48,7 +46,7 @@ namespace Calculator.Tests
             // Assert
             result.Should().Be(12);
         }
-        
+
         [Fact]
         public void Divide_TwoPositiveNumbers_ReturnsQuotient()
         {
@@ -62,7 +60,7 @@ namespace Calculator.Tests
             // Assert
             result.Should().Be(5);
         }
-        
+
         [Fact]
         public void Divide_ByZero_ThrowsException()
         {
@@ -74,7 +72,7 @@ namespace Calculator.Tests
             Action act = () => _calculator.Divide(a, b);
 
             // Assert
-            act.Should().Throw<ArgumentException>().WithMessage("Cannot divide by zero.");
+            act.Should().Throw<DivideByZeroException>().WithMessage("Cannot divide by zero.");
         }
     }
 }
