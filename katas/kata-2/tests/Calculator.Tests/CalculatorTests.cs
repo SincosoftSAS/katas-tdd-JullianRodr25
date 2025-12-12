@@ -11,11 +11,11 @@ namespace Calculator.Tests
         public void Add_TwoPositiveNumbers_ReturnsSum()
         {
             // Arrange
-            int a = 5;
-            int b = 3;
+            int valor1 = 5;
+            int valor2 = 3;
 
             // Act
-            int result = _calculator.Add(a, b);
+            int result = _calculator.Add(valor1, valor2);
 
             // Assert
             result.Should().Be(8);
