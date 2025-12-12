@@ -48,5 +48,19 @@ namespace Calculator.Tests
             // Assert
             result.Should().Be(12);
         }
+        
+        [Fact]
+        public void Divide_TwoPositiveNumbers_ReturnsQuotient()
+        {
+            // Arrange
+            int valor1 = 10;
+            int valor2 = 2;
+
+            // Act
+            int result = _calculator.Divide(valor1, valor2);
+
+            // Assert
+            result.Should().Be(5);
+        }
     }
 }
