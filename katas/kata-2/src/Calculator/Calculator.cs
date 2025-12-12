@@ -12,9 +12,9 @@ namespace Calculator
            return valor1 - valor2;
         }
 
-        public int Multiply(int a, int b)
+        public int Multiply(int valor1, int valor2)
         {
-            return a * b;
+            return valor1 * valor2;
         }
 
         public int Divide(int a, int b)
