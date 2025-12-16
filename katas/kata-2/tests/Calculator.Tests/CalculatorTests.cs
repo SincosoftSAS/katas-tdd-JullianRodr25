@@ -60,7 +60,6 @@ namespace Calculator.Tests
             // Assert
             result.Should().Be(5);
         }
-
         [Fact]
         public void Divide_ByZero_ThrowsException()
         {
