@@ -6,6 +6,8 @@ namespace LeapYear
         {
             if (year % 4 == 0)
                 return true;
+            else 
+                return false;
             throw new NotImplementedException("Implement using TDD: Red → Green → Refactor");
         }
     }
