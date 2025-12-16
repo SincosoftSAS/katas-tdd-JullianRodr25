@@ -4,11 +4,7 @@ namespace LeapYear
     {
         public static bool IsLeapYear(int year)
         {
-            if (year % 4 == 0)
-                return true;
-            else 
-                return false;
-            throw new NotImplementedException("Implement using TDD: Red → Green → Refactor");
+            return year % 4 == 0;
         }
     }
 }
