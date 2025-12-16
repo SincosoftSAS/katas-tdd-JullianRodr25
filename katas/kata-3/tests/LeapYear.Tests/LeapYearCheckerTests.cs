@@ -4,18 +4,25 @@ namespace LeapYear.Tests
 {
     public class LeapYearCheckerTests
     {
-        [Fact]
-        public void Year_DivisibleBy4_ButNotBy100_IsLeapYear()
+        [Theory]
+        [InlineData(2008)]
+        [InlineData(2004)]
+        [InlineData(2012)]  
+        public void Year_DivisibleBy4_ButNotBy100_IsLeapYear(int year)
         {
             // Ejemplo: 2004 es año bisiesto
-            Assert.True(LeapYearChecker.IsLeapYear(2004));
+            Assert.True(LeapYearChecker.IsLeapYear(year));
         }
         
-        [Fact]
-        public void Year_NotDivisibleBy4_IsNotLeapYear()
+        [Theory]
+        [InlineData(1700)]
+        [InlineData(1800)]
+        [InlineData(1900)]
+        [InlineData(2100)]
+        public void Year_NotDivisibleBy4_IsNotLeapYear(int year)
         {
             // Ejemplo: 2001 no es año bisiestoo
-            Assert.False(LeapYearChecker.IsLeapYear(2001));
+            Assert.False(LeapYearChecker.IsLeapYear(year));
         }
         
         [Fact]
